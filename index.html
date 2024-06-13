@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="./admin.js"></script>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="/main.css">
+  <script type="module" src="/admin.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <header>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/index.html">admin</a></li>
+          <li><a href="/login.html">login</a></li>
+        </ul>
+      </nav>
+
+      <button id="logout-btn">logout</button>
+    </header>
+
+    <main>
+      <!-- <h1>Admin page</h1> -->
+      <div id="app">
+        <div>
+          <h1>Admin Panel</h1>
+        </div>
+        <form>
+          <div class="form__group field">
+            <input type="input" name="title" id="title" class="form__field" placeholder="Product title" required="">
+            <label for="title" class="form__label">Product title</label>
+        </div>
+          <!-- <div class="form-control">
+            <label for="title">Product title</label>
+            <input type="text" name="title" id="title">
+          </div> -->
+
+          <div class="form__group field">
+            <input type="number" name="price" id="price" class="form__field" placeholder="Product price" required="">
+            <label for="price" class="form__label">Product price</label>
+        </div>
+          <!-- <div class="form-control">
+            <label for="price">Product price</label>
+            <input type="number" name="price" id="price">
+          </div> -->
+
+          <div class="form-control">
+            <label for="description">Product description</label>
+            <textarea rows="4" name="description" id="description"></textarea>
+          </div>
+         
+
+          <button id="submit" type="submit">Add</button>
+        </form>
+      </div>
+     
+      <div id="container">
+        
+      </div>
+
+    </main>
+
+    
+  </div>
+</body>
+
+</html>
+</body>
+</html>
