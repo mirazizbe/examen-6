@@ -143,6 +143,9 @@
       width: 100%;
       border: none;
       color: #fff;
+      box-shadow: 2px 2px 6px 5px #2cb5d7;
+
+      background: #27b6da;
       
     } 
     .form-control textarea:focus {
@@ -221,13 +224,14 @@
     }
     main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url("https://images.pexels.com/photos/6034022/pexels-photo-6034022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* -webkit-filter: blur(4px); */
+    gap: 2rem;
     }
   #app{
     width: 400px;
@@ -277,8 +281,24 @@
   #login:hover{
    color: #38caef;
   }
-  p{
+  #copy{
     margin-top: 10rem;
+  }
+  #container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    background:   #38caef;
+    border: none;
+    border-radius: 10px;
+    margin-left: 2rem;
+    box-shadow: 2px 2px 5px 6px  #38caef;
+
+  }
+  #cards{
+  
   }
 
   

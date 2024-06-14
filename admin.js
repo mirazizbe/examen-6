@@ -5,33 +5,18 @@ const title = document.getElementById("title");
 const price = document.getElementById("price");
 const description = document.getElementById("description");
 const container = document.getElementById("container");
+const addProductBtn = document.getElementById ("submit;")
+
 
 logout_btn.onclick = logout;
 
-// fetch_btn.onclick =  async function (e) {
-//   const api_url = "https://api.escuelajs.co/api/v1/auth/profile";
-//   const access_token = sessionStorage.getItem("access_token");
-
-//   const response = await fetch(api_url, {
-//     method: "GET",
-//     headers: {
-//       Authorization: `Bearer ${access_token}`,
-//     },
-//   });
-
-//   const user = await response.json();
-//   console.log(user);
-// };
-
-
-
 window.addEventListener("DOMContentLoaded", function () {
   const hasToken = checkToken();
-
-  if (!hasToken) {
+ if (!hasToken) {
     redirect("/login.html"); 
   }
 });
+
 
 const form = document.forms[0];
 const products = [];
@@ -45,14 +30,25 @@ form.onsubmit = function(event) {
     price: price.value,
     description: description.value,
   }
-
+  
   title.value = '';
   price.value = '';
   description.value = '';
   
-
   products.push(newProduct);
-  // console.log(products);
-  newProduct.push(container);
-  console.log(container);
+  localStorage.setItem('products', JSON.stringify(products));
+  addProductToDOM(newProduct);
+  
+}
+function addProductToDOM(product) {
+  const productPage = document.createElement('div');
+  productPage.classList.add("product-page");
+  productPage.innerHTML = `
+  <p>ID: ${product.id}</p>
+  <p>Title; ${product.title}</p>
+  <p>Price: ${product.price}$</p>
+  <p>Description: ${product.description}</p>
+  
+  `;
+  container.append(productPage);
 }
